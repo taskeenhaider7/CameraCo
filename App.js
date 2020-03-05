@@ -90,7 +90,7 @@ class App extends Component {
         try {
             let user = await AsyncStorage.getItem('user');
             _user = JSON.stringify(user);
-            if (_user != "null") {
+            if (_user !== "null") {
                 const resetAction = NavigationActions.reset({
                     index: 0,
                     actions: [NavigationActions.navigate({routeName: 'Fotes', params: {page: 1, showLoader: true}})],
@@ -109,7 +109,7 @@ class App extends Component {
         }
     };
 
-    componentWillMount() {
+    componentDidMount() {
 
         NetInfo.fetch().then(state => {
             console.log("Connection type", state.type);

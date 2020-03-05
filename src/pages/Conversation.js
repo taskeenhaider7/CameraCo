@@ -29,7 +29,7 @@ import cameraCoApi from "../api/CameraCoApi";
 const {height, width} = Dimensions.get('window');
 import moment from 'moment';
 import RNTextInput from 'react-native-text-input-enhance';
-import Firebase from 'react-native-firebase';
+import {Firebase} from 'react-native-firebase';
 import type {RemoteMessage} from 'react-native-firebase';
 import {Notification, NotificationOpen} from 'react-native-firebase';
 import TopBar from '../components/TopBar';

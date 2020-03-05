@@ -66,6 +66,7 @@ export default class Login extends React.Component {
       if(!res){
         alert("There was an error while trying to log you in.");
       }else{
+        console.log("login walay ma a rha ha login new choro");
         if(res.success){
 
           if(!global.NOTE_COMPONENT.NOTE_INTENT){

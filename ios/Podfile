@@ -38,6 +38,10 @@ target 'Camera' do
 
   pod 'react-native-video', :path => '../node_modules/react-native-video'
 
+  pod 'react-native-geolocation', :path => '../node_modules/@react-native-community/geolocation'
+
+  pod 'react-native-viewpager', :path => '../node_modules/@react-native-community/viewpager'
+
   target 'CameraTests' do
     inherit! :search_paths
     # Pods for testing

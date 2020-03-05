@@ -24,7 +24,11 @@ export default class GalleryGridPicker extends Component {
   });
   }
   constructor(params){
+
+
+
     super(params);
+      console.log("Gallery Grid ka constructor", params);
     this.state = {
       photos:[]
     }

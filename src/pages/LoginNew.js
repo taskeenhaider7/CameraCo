@@ -58,11 +58,13 @@ export default class LoginNew extends React.Component {
   login(){
     let email = this.state.email;
     let password = this.state.password;
-    if((email.trim() != '') && (password.trim != '') ){
+    if((email.trim() !== '') && (password.trim !== '') ){
       cameraCoApi.login(email,password).then((res) => {
+        console.log("login response", res);
         if(!res){
           alert("There was an error while trying to log you in.");
         }else{
+            console.log("login response success boolean", res.success);
           if(res.success){
               this.saveUser();
               const resetAction = NavigationActions.reset({
@@ -72,6 +74,7 @@ export default class LoginNew extends React.Component {
               this.props.navigation.dispatch(resetAction);
 
           }else{
+              console.log("login response success boolean", res.success);
             alert(res.reason);
           }
         }
@@ -105,9 +108,10 @@ export default class LoginNew extends React.Component {
     cameraCoApi.getMe().then((response) => {
       if(response.hasOwnProperty('name')){
         let user = JSON.stringify(response);
-        // alert(user);
         AsyncStorage.setItem('user',user);
       }
+    }).catch(error=>{
+      console.log(error);
     })
   }
   goToResetPassword(){
