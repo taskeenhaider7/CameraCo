@@ -11,6 +11,8 @@ import {
 import PropTypes from 'prop-types';
 import {CachedImage} from 'react-native-cached-image';
 
+import searchIcon from '../assets/img/icons/search.png';
+
 export default class TopBar extends Component {
   constructor(props){
     super(props);
@@ -73,11 +75,11 @@ export default class TopBar extends Component {
   }
   renderFirstBtn(){
     if(this.props.profileImage){
-      if(this.props.firstBtnImage != null){
+      if(this.props.firstBtnImage !== null){
         return(
           <TouchableOpacity style={styles.wrapperIcon} onPress={() => this.props.firstBtn()}>
             <CachedImage style={styles.imageProfile}
-              source={{uri:this.props.firstBtnImage}}
+              source={{uri:this.props.firstBtnImage?this.props.firstBtnImage:null}}
             />
           </TouchableOpacity>
         )
@@ -85,12 +87,12 @@ export default class TopBar extends Component {
         return null
       }
     }else{
-      let _image = this.getImage(this.props.firstBtnImage)
-      if(_image != null){
+      let _image = this.getImage(this.props.firstBtnImage);
+      if(_image !== null){
         return(
           <TouchableOpacity style={styles.wrapperIcon} onPress={() => this.props.firstBtn()}>
             <Image style={styles.icon}
-              source={_image}
+              source={_image? _image:null}
             />
           </TouchableOpacity>
         )
@@ -106,7 +108,7 @@ export default class TopBar extends Component {
       return(
         <TouchableOpacity style={[styles.wrapperIcon,{alignItems:'center'}]} onPress={() => this.props.secondBtn()}>
           <Image style={styles.icon}
-            source={_image}
+            source={_image ?_image :null}
           />
         </TouchableOpacity>
       )
@@ -123,7 +125,7 @@ export default class TopBar extends Component {
       return(
         <TouchableOpacity style={[styles.wrapperIcon,{alignItems:'center'}]} onPress={() => this.props.thirdBtn()}>
           <Image style={[styles.icon,(_color != '') ? {tintColor:_color} : {tintColor:'black'}]}
-            source={_image}
+            source={_image ? _image : null}
           />
         </TouchableOpacity>
       )
@@ -145,7 +147,7 @@ export default class TopBar extends Component {
             return(
               <TouchableOpacity style={[styles.wrapperIcon,{alignItems:'flex-end'}]} onPress={() => this.fourthBtnWrapper()}>
                 <Image style={styles.icon}
-                  source={_imageGif}
+                  source={_imageGif?_imageGif:null}
                 />
               </TouchableOpacity>
             )
@@ -153,7 +155,7 @@ export default class TopBar extends Component {
             return(
               <TouchableOpacity style={[styles.wrapperIcon,{alignItems:'flex-end'}]} onPress={() => this.fourthBtnWrapper()}>
                 <Image style={styles.icon}
-                  source={_image}
+                  source={_image?_image:null}
                 />
               </TouchableOpacity>
             )
@@ -162,7 +164,7 @@ export default class TopBar extends Component {
         return(
           <TouchableOpacity style={[styles.wrapperIcon,{alignItems:'flex-end'}]} onPress={() => this.fourthBtnWrapper()}>
             <Image style={styles.icon}
-              source={_image}
+              source={_image?_image:null}
             />
           </TouchableOpacity>
         )
@@ -194,7 +196,7 @@ export default class TopBar extends Component {
           <View style={styles.container_button_search}>
             <Image
               style={styles.icon_button_search}
-              source={require('../assets/img/icons/search.png')}
+              source={searchIcon}
             />
             <Text style={styles.txt_button_search}>{this.props.mainTitle}</Text>
           </View>

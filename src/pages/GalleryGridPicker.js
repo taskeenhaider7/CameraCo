@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  CameraRoll,
   FlatList,
   Image,
   StyleSheet,
@@ -8,6 +7,8 @@ import {
   Text,
   View
 } from 'react-native';
+
+import CameraRoll from "@react-native-community/cameraroll";
 
 export default class GalleryGridPicker extends Component {
   _keyExtractor = (item, index) => index;
@@ -24,11 +25,7 @@ export default class GalleryGridPicker extends Component {
   });
   }
   constructor(params){
-
-
-
     super(params);
-      console.log("Gallery Grid ka constructor", params);
     this.state = {
       photos:[]
     }

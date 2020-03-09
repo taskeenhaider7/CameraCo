@@ -44,15 +44,16 @@ export default class Media extends Component {
   }
   renderContent(){
     if(this.state.show_notifications){
+
       return(
-        <Notifications
-                ref={ref => {
+          <Notifications
+              ref={ref => {
                   this.notifications = ref;
-                }}
-                navigation={this.props.navigation}
-                onGridItemPressed={this.props.onGridItemPressed} //Go to fote view
-                >
-              </Notifications>
+              }}
+              navigation={this.props.navigation}
+              onGridItemPressed={this.props.onGridItemPressed} //Go to fote view
+          >
+          </Notifications>
       )
     }else{
       return(
@@ -71,7 +72,6 @@ export default class Media extends Component {
         </Feed>
       )
     }
-
   }
 
   onGridPressed(){
@@ -129,8 +129,7 @@ export default class Media extends Component {
             fourthBtnImage={'chat'}
             fourthBtn={() => this.goCreateConversations()}
             mainTitle={'Notifications'}
-          >
-          </TopBar>
+          />
         )
       }else{
           return(
@@ -150,8 +149,7 @@ export default class Media extends Component {
               ref={ref => {
                 this.topbar = ref;
               }}
-            >
-            </TopBar>
+            />
           )
       }
   }

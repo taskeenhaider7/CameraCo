@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import {
     AppState,
-    CameraRoll,
     Dimensions,
     Platform,
     TouchableOpacity,
     StyleSheet,
     Keyboard,
-    Text,
     View,
     Image,
     TextInput,
@@ -26,9 +24,8 @@ import {ifIphoneX} from 'react-native-iphone-x-helper'
 import cameraCoApi from "../api/CameraCoApi";
 import {createResponder} from 'react-native-gesture-responder'
 import ActionButtons from '../components/ActionButtons';
-import {Firebase} from 'react-native-firebase';
-import type {RemoteMessage} from 'react-native-firebase';
-import {Notification, NotificationOpen} from 'react-native-firebase';
+import messaging, {firebase} from '@react-native-firebase/messaging';
+import notifee from '@notifee/react-native';
 import Swiper from 'react-native-swiper';
 import Media from "../components/Media";
 import CreateConversation from "./CreateConversation";
@@ -221,7 +218,7 @@ export default class Fotes extends React.Component {
             },
         });
         //FCM MESSAGES
-        Firebase.messaging().getToken().then(fcmToken => {
+        firebase.messaging().getToken().then(fcmToken => {
             if (fcmToken) {
                 //alert("Ah perro tienes el token: "+ fcmToken)
                 cameraCoApi.update_token(fcmToken).then((res) => {
@@ -232,11 +229,11 @@ export default class Fotes extends React.Component {
                 // alert("Ah perro no te salio")
             }
         });
-        Firebase.messaging().hasPermission().then(enabled => {
+        firebase.messaging().hasPermission().then(enabled => {
             if (enabled) {
 
             } else {
-                Firebase.messaging().requestPermission()
+                messaging().requestPermission()
                     .then(() => {
 
                     })
@@ -251,7 +248,7 @@ export default class Fotes extends React.Component {
         console.log("oy  fotes ka componentDidMount ma puj gya ee oy");
 
         AppState.addEventListener('change', this._handleAppStateChange);
-        this.messageListener = Firebase.messaging().onMessage((message: remoteMessage) => {
+        this.messageListener = firebase.messaging().onMessage((message: remoteMessage) => {
             console.log("UASDASD");
 
         });
@@ -271,46 +268,48 @@ export default class Fotes extends React.Component {
         //   }
         //
         // });
-        this.notificationDisplayedListener = Firebase.notifications().onNotificationDisplayed((notification: Notification) => {
+        /*this.notificationDisplayedListener = notifee.displayNotification((notification: any) => {
 
-            Firebase.notifications().getBadge()
+           //Change here
+            /!*notifee.bad()
                 .then(count => {
-                    count++
-                    Firebase.notifications().setBadge(count)
+                    count++;
+                    firebase.notifications().setBadge(count)
                 })
                 .then(() => {
                     console.log('Doing great')
                 })
                 .catch(error => {
-                    console.log('fail to count')
-                })
+                    console.log('fail to count', error)
+                })*!/
 
-        })
+        });*/
 
-        this.notificationListener = Firebase.notifications().onNotification((notification: Notification) => {
+        //onNotification
+        /*this.notificationListener = notifee.Notification((notification: Notification) => {
             // alert("3");
             //on message received and app is open
             if (notification.data.hasOwnProperty("type")) {
-                if (notification.data.type == "DM") {
+                if (notification.data.type === "DM") {
                     _notification = notification.data;
                     _notification.media = JSON.parse(_notification.media);
                     _notification.thumbnails = JSON.parse(_notification.thumbnails);
                     this.Media.onNewMessageReceived(_notification);
                     this.Conversations.onNewMessageReceived(_notification);
 
-                } else if (notification.data.type == "LIKE") {
+                } else if (notification.data.type === "LIKE") {
                     _notification = notification.data;
                     this.Media.onNewNotificationUpdateReceived(_notification)
-                } else if (notification.data.type == "COMMENT") {
+                } else if (notification.data.type === "COMMENT") {
                     _notification = notification.data;
                     this.Media.onNewNotificationUpdateReceived(_notification)
-                } else if (notification.data.type == "FOLLOW") {
+                } else if (notification.data.type === "FOLLOW") {
                     _notification = notification.data;
                     this.Media.onNewNotificationUpdateReceived(_notification)
                 }
             }
-        });
-        this.notificationOpenedListener = Firebase.notifications().onNotificationOpened((notificationOpen: NotificationOpen) => {
+        });*/
+        /*this.notificationOpenedListener = notifee.openNotificationSettings((notificationOpen: Notification) => {
             const action = notificationOpen.action;
             const notification: Notification = notificationOpen.notification;
             cameraCoApi.getConversation(notification.data.dm_id).then((res) => {
@@ -329,8 +328,8 @@ export default class Fotes extends React.Component {
                 }
 
             })
-        });
-        Firebase.notifications().getInitialNotification().then((notificationOpen: NotificationOpen) => {
+        });*/
+        notifee.getInitialNotification().then((notificationOpen: any) => {
             if (notificationOpen) {
                 // App was opened by a notification
                 // Get the action triggered by the notification being opened
@@ -407,9 +406,8 @@ export default class Fotes extends React.Component {
 
         AppState.removeEventListener('change', this._handleAppStateChange);
         Geolocation.clearWatch(this.id);
-        this.notificationDisplayedListener();
-        this.notificationListener();
-        this.messageListener();
+        this.notificationDisplayedListener =null;
+        this.notificationListener=null;
 
     }
 
@@ -1047,7 +1045,6 @@ export default class Fotes extends React.Component {
                     keyboardShouldPersistTaps={"always"}
                     showsButtons={true}
                     loop={false}
-                    showsButtons={false}
                     index={this.state.page}
                     showsPagination={false}
                     scrollEnabled={!this.state.preview}
@@ -1087,16 +1084,17 @@ export default class Fotes extends React.Component {
                                currentPage={this.state.currentPage}
                                ref={ref => {
                                    this.Media = ref;
-                               }}
-                               navigation={this.props.navigation}
-                        ></Media>
+                               }}>
+                        </Media>
                     </View>
                     <View style={styles.scontentContainer}>
                         <CreateConversation
                             ref={ref => {
                                 this.Conversations = ref;
                             }}
-                            navigation={this.props.navigation}></CreateConversation>
+                            navigation={this.props.navigation}>
+
+                        </CreateConversation>
                     </View>
                 </Swiper>
             </View>

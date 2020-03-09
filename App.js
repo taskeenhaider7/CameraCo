@@ -1,19 +1,8 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
 import {
-    AppState,
-    CameraRoll,
-    Dimensions,
-    Platform,
-    TouchableOpacity,
     StyleSheet,
-    Text,
-    TextInput,
-    View,
-    Image,
-    StatusBar,
-    Alert,
-    Slider,
+    View
 } from 'react-native';
 
 import NetInfo from "@react-native-community/netinfo"
@@ -21,9 +10,10 @@ import PushNotificationIOS from "@react-native-community/push-notification-ios";
 
 import {NavigationActions, StackNavigator} from 'react-navigation';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import type {RemoteMessage} from 'react-native-firebase';
-import {NotificationOpen} from 'react-native-firebase';
+/*import type {RemoteMessage} from 'react-native-firebase';
+import {NotificationOpen} from 'react-native-firebase';*/
 
+import {firebase} from '@react-native-firebase/messaging';
 import Gallery from "./src/pages/Gallery";
 import Note from "./src/pages/Note";
 import Type from "./src/pages/Type";
@@ -64,7 +54,7 @@ import PhoneVerificationEntry from "./src/pages/PhoneVerificationEntry";
 import GalleryGridPicker from "./src/pages/GalleryGridPicker";
 import Blocked from "./src/pages/Blocked";
 import SearchView from "./src/pages/search/SearchView";
-import {createStackNavigator} from "react-navigation-stack";
+/*import {createStackNavigator} from "react-navigation-stack";*/
 
 
 statusBarHeight = getStatusBarHeight();
@@ -89,7 +79,7 @@ class App extends Component {
     displayAsync = async () => {
         try {
             let user = await AsyncStorage.getItem('user');
-            _user = JSON.stringify(user);
+            const _user = JSON.stringify(user);
             if (_user !== "null") {
                 const resetAction = NavigationActions.reset({
                     index: 0,
@@ -141,6 +131,7 @@ class App extends Component {
             handleFirstConnectivityChange
         );*/
         _user = this.displayAsync();
+
         //PushNotificationIOS.setApplicationIconBadgeNumber(0);
     }
 
