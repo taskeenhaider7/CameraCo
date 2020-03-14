@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   AsyncStorage,
-  FlatList,
   StyleSheet,
   Text,
   TouchableOpacity,

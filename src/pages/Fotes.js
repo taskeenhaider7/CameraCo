@@ -25,7 +25,6 @@ import cameraCoApi from "../api/CameraCoApi";
 import {createResponder} from 'react-native-gesture-responder'
 import ActionButtons from '../components/ActionButtons';
 import messaging, {firebase} from '@react-native-firebase/messaging';
-import notifee from '@notifee/react-native';
 import Swiper from 'react-native-swiper';
 import Media from "../components/Media";
 import CreateConversation from "./CreateConversation";
@@ -329,7 +328,7 @@ export default class Fotes extends React.Component {
 
             })
         });*/
-        notifee.getInitialNotification().then((notificationOpen: any) => {
+        /*notifee.getInitialNotification().then((notificationOpen: any) => {
             if (notificationOpen) {
                 // App was opened by a notification
                 // Get the action triggered by the notification being opened
@@ -353,7 +352,7 @@ export default class Fotes extends React.Component {
 
                 })
             }
-        });
+        });*/
         global.NOTE_COMPONENT = {};
         global.NOTE_COMPONENT.NOTE_INTENT = false;
         global.FOTES = this;
