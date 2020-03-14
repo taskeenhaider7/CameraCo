@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
+import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 //import io.invertase.firebase.RNFirebasePackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
