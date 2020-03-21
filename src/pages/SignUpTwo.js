@@ -106,7 +106,6 @@ export default class SignUpTwo extends React.Component {
         <TouchableOpacity onPress={() => this.signUp()}
           style={[styles.wrapper_btn_pink, this.isValidForm() ? styles.enabledBtn : styles.disabledBtn]}
           disabled={!this.isValidForm()}>
-        >
          <Text style={[styles.txt_btn,this.isValidForm() ? styles.enabledTxt : styles.disabledTxt]}>SIGN UP</Text>
         </TouchableOpacity>
       )
