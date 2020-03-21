@@ -15,7 +15,7 @@ import {AudioRecorder, AudioUtils} from 'react-native-audio';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import Video from "react-native-video";
 import AnimationAudio from './AnimationAudio';
-const AuralShifterEvents = new NativeEventEmitter(NativeModules.AuralShifter)
+import EventEmitter from "react-native-eventemitter";
 
 export default class ButtonRecorder extends Component {
   constructor(props){
@@ -42,11 +42,11 @@ export default class ButtonRecorder extends Component {
     AudioRecorder.requestAuthorization().then((isAuthorised) => {
 
     })
-    AuralShifterEvents.addListener("onRecordFinished", res => {
+    EventEmitter.addListener("onRecordFinished", res => {
         this.setState({ url: res.path, audioNote: res.path });
         this.props.onFinishedRecording(res.path);
     });
-    AuralShifterEvents.addListener("onMeasure",
+    EventEmitter.addListener("onMeasure",
       res => {
         if(this.state.currentTime > 15.0){
           this.onButtonRelease();

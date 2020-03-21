@@ -6,7 +6,6 @@ import {
   StyleSheet,
   NativeModules,
   NativeAppEventEmitter,
-  NativeEventEmitter,
   TouchableOpacity,
   Image,
   Text,
@@ -15,7 +14,7 @@ import {
 } from 'react-native';
 import {AudioRecorder, AudioUtils} from 'react-native-audio';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-const AuralShifterEvents = new NativeEventEmitter(NativeModules.AuralShifter);
+import EventEmitter from "react-native-eventemitter";
 
 export default class SoundRecorder extends Component {
   constructor(props){
@@ -46,10 +45,10 @@ export default class SoundRecorder extends Component {
     // var d = new Date();
     // var n = d.getTime();
     // this.prepareRecordingPath(AudioUtils.DocumentDirectoryPath + '/'+n+'-audio.aac',)
-    AuralShifterEvents.addListener("onRecordFinished",
+    EventEmitter.addListener("onRecordFinished",
       res => {this.setState({url:res.path});this.props.onFinishedRecording(res.path);}
     )
-    AuralShifterEvents.addListener("onMeasure",
+    EventEmitter.addListener("onMeasure",
       res => {
 
 
