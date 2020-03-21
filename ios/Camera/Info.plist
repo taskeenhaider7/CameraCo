@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Camera</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,11 +17,41 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb2245597769058154</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>2245597769058154</string>
+	<key>FacebookDisplayName</key>
+	<string>Fotes</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow Lyrc to access your photos to select image.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow Lyrc to access your photos to capture image</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please allow Lyrc to access your location to record message.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow Lyrc to access your location for stay update</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please allow Lyrc to access your location for stay update</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -37,19 +67,40 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lato-Bold.ttf</string>
+		<string>Lato-Hairline.ttf</string>
+		<string>Lato-Heavy.ttf</string>
+		<string>Lato-Light.ttf</string>
+		<string>Typo_Round_Bold_Demo.otf</string>
+		<string>Typo_Round_Bold_Italic_Demo.otf</string>
+		<string>Typo_Round_Italic_Demo.otf</string>
+		<string>Typo_Round_Light_Demo.otf</string>
+		<string>Typo_Round_Light_Italic_Demo.otf</string>
+		<string>Typo_Round_Regular_Demo.otf</string>
+		<string>Typo_Round_Thin_Demo.otf</string>
+		<string>Typo_Round_Thin_Italic_Demo.otf  </string>
+		<string>Calligraffiti.ttf</string>
+		<string>CafiarDreams.ttf</string>
+		<string>overpass-extrabold.otf</string>
+		<string>SF_Cartoonist_Hand.ttf</string>
+		<string>StardosStencil-Regular.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>LaunchImage</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>

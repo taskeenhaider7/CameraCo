@@ -19,6 +19,25 @@
 		2DCD954D1E0B4F2C00145EB5 /* CameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CameraTests.m */; };
 		4E0034ECA821FA6096BC7AF6 /* libPods-CameraTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6D17954F7780D22447D95F /* libPods-CameraTests.a */; };
 		4EA254BBCBB451480AF56067 /* libPods-Camera-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 121FFCC216BFD170DB61D21E /* libPods-Camera-tvOSTests.a */; };
+		5511C709241D3A9600ECE734 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5511C708241D3A9600ECE734 /* GoogleService-Info.plist */; };
+		5511C75F241D628300ECE734 /* Typo_Round_Bold_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C74D241D628300ECE734 /* Typo_Round_Bold_Demo.otf */; };
+		5511C760241D628300ECE734 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C74E241D628300ECE734 /* Lato-Bold.ttf */; };
+		5511C761241D628300ECE734 /* Calligraffiti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C74F241D628300ECE734 /* Calligraffiti.ttf */; };
+		5511C762241D628300ECE734 /* Typo_Round_Light_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C750241D628300ECE734 /* Typo_Round_Light_Demo.otf */; };
+		5511C763241D628300ECE734 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C751241D628300ECE734 /* Lato-Hairline.ttf */; };
+		5511C764241D628300ECE734 /* SF_Cartoonist_Hand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C752241D628300ECE734 /* SF_Cartoonist_Hand.ttf */; };
+		5511C765241D628300ECE734 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C753241D628300ECE734 /* CaviarDreams.ttf */; };
+		5511C766241D628300ECE734 /* Typo_Round_Thin_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C754241D628300ECE734 /* Typo_Round_Thin_Demo.otf */; };
+		5511C767241D628300ECE734 /* overpass-extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C755241D628300ECE734 /* overpass-extrabold.otf */; };
+		5511C768241D628300ECE734 /* Typo_Round_Bold_Italic_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C756241D628300ECE734 /* Typo_Round_Bold_Italic_Demo.otf */; };
+		5511C769241D628300ECE734 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C757241D628300ECE734 /* Lato-Heavy.ttf */; };
+		5511C76A241D628300ECE734 /* Typo_Round_Regular_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C758241D628300ECE734 /* Typo_Round_Regular_Demo.otf */; };
+		5511C76B241D628300ECE734 /* Typo_Round_Thin_Italic_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C759241D628300ECE734 /* Typo_Round_Thin_Italic_Demo.otf */; };
+		5511C76C241D628300ECE734 /* Typo_Round_Light_Italic_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C75A241D628300ECE734 /* Typo_Round_Light_Italic_Demo.otf */; };
+		5511C76D241D628300ECE734 /* StardosStencil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C75B241D628300ECE734 /* StardosStencil-Regular.ttf */; };
+		5511C76E241D628300ECE734 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C75C241D628300ECE734 /* Lato-Light.ttf */; };
+		5511C76F241D628300ECE734 /* Typo_Round_Italic_Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C75D241D628300ECE734 /* Typo_Round_Italic_Demo.otf */; };
+		5511C770241D628300ECE734 /* Typo_Round_Thin_Italic Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5511C75E241D628300ECE734 /* Typo_Round_Thin_Italic Demo.otf */; };
 		BBE79E1977D80242EE794C37 /* libPods-Camera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7407E1D7B6F5FAAB35DEA35 /* libPods-Camera.a */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +66,7 @@
 		068A55065DEFF85912406B27 /* libPods-Camera-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Camera-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E446243AC2AA02E1602B3B /* Pods-Camera-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Camera-tvOS/Pods-Camera-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		121FFCC216BFD170DB61D21E /* libPods-Camera-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Camera-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Lyrc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyrc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Camera/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Camera/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -59,6 +78,26 @@
 		2D02E4901E0B4A5D006451C7 /* Camera-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Camera-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8E19A9D8EE8462003B57A7 /* Pods-Camera-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Camera-tvOSTests/Pods-Camera-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		44D0296A2F1A0D6D86F3BA20 /* Pods-Camera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.debug.xcconfig"; path = "Target Support Files/Pods-Camera/Pods-Camera.debug.xcconfig"; sourceTree = "<group>"; };
+		5511C708241D3A9600ECE734 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5511C74D241D628300ECE734 /* Typo_Round_Bold_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Bold_Demo.otf; sourceTree = "<group>"; };
+		5511C74E241D628300ECE734 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		5511C74F241D628300ECE734 /* Calligraffiti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calligraffiti.ttf; sourceTree = "<group>"; };
+		5511C750241D628300ECE734 /* Typo_Round_Light_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Light_Demo.otf; sourceTree = "<group>"; };
+		5511C751241D628300ECE734 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		5511C752241D628300ECE734 /* SF_Cartoonist_Hand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF_Cartoonist_Hand.ttf; sourceTree = "<group>"; };
+		5511C753241D628300ECE734 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		5511C754241D628300ECE734 /* Typo_Round_Thin_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Thin_Demo.otf; sourceTree = "<group>"; };
+		5511C755241D628300ECE734 /* overpass-extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "overpass-extrabold.otf"; sourceTree = "<group>"; };
+		5511C756241D628300ECE734 /* Typo_Round_Bold_Italic_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Bold_Italic_Demo.otf; sourceTree = "<group>"; };
+		5511C757241D628300ECE734 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		5511C758241D628300ECE734 /* Typo_Round_Regular_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Regular_Demo.otf; sourceTree = "<group>"; };
+		5511C759241D628300ECE734 /* Typo_Round_Thin_Italic_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Thin_Italic_Demo.otf; sourceTree = "<group>"; };
+		5511C75A241D628300ECE734 /* Typo_Round_Light_Italic_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Light_Italic_Demo.otf; sourceTree = "<group>"; };
+		5511C75B241D628300ECE734 /* StardosStencil-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StardosStencil-Regular.ttf"; sourceTree = "<group>"; };
+		5511C75C241D628300ECE734 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		5511C75D241D628300ECE734 /* Typo_Round_Italic_Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Typo_Round_Italic_Demo.otf; sourceTree = "<group>"; };
+		5511C75E241D628300ECE734 /* Typo_Round_Thin_Italic Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Typo_Round_Thin_Italic Demo.otf"; sourceTree = "<group>"; };
+		558D7B54241D2C8D00AE24A0 /* Camera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Camera.entitlements; path = Camera/Camera.entitlements; sourceTree = "<group>"; };
 		73A51DB969CDC185802A4501 /* Pods-CameraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraTests.debug.xcconfig"; path = "Target Support Files/Pods-CameraTests/Pods-CameraTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5F03E50F7AD67259E1D9778 /* Pods-CameraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraTests.release.xcconfig"; path = "Target Support Files/Pods-CameraTests/Pods-CameraTests.release.xcconfig"; sourceTree = "<group>"; };
 		C7407E1D7B6F5FAAB35DEA35 /* libPods-Camera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Camera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +164,8 @@
 		13B07FAE1A68108700A75B9A /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				5511C708241D3A9600ECE734 /* GoogleService-Info.plist */,
+				558D7B54241D2C8D00AE24A0 /* Camera.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -149,6 +190,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5511C74C241D628300ECE734 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5511C74D241D628300ECE734 /* Typo_Round_Bold_Demo.otf */,
+				5511C74E241D628300ECE734 /* Lato-Bold.ttf */,
+				5511C74F241D628300ECE734 /* Calligraffiti.ttf */,
+				5511C750241D628300ECE734 /* Typo_Round_Light_Demo.otf */,
+				5511C751241D628300ECE734 /* Lato-Hairline.ttf */,
+				5511C752241D628300ECE734 /* SF_Cartoonist_Hand.ttf */,
+				5511C753241D628300ECE734 /* CaviarDreams.ttf */,
+				5511C754241D628300ECE734 /* Typo_Round_Thin_Demo.otf */,
+				5511C755241D628300ECE734 /* overpass-extrabold.otf */,
+				5511C756241D628300ECE734 /* Typo_Round_Bold_Italic_Demo.otf */,
+				5511C757241D628300ECE734 /* Lato-Heavy.ttf */,
+				5511C758241D628300ECE734 /* Typo_Round_Regular_Demo.otf */,
+				5511C759241D628300ECE734 /* Typo_Round_Thin_Italic_Demo.otf */,
+				5511C75A241D628300ECE734 /* Typo_Round_Light_Italic_Demo.otf */,
+				5511C75B241D628300ECE734 /* StardosStencil-Regular.ttf */,
+				5511C75C241D628300ECE734 /* Lato-Light.ttf */,
+				5511C75D241D628300ECE734 /* Typo_Round_Italic_Demo.otf */,
+				5511C75E241D628300ECE734 /* Typo_Round_Thin_Italic Demo.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +225,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5511C74C241D628300ECE734 /* fonts */,
 				13B07FAE1A68108700A75B9A /* Camera */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CameraTests */,
@@ -174,7 +241,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Camera.app */,
+				13B07F961A680F5B00A75B9A /* Lyrc.app */,
 				00E356EE1AD99517003FC87E /* CameraTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* Camera-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* Camera-tvOSTests.xctest */,
@@ -194,7 +261,6 @@
 				73A51DB969CDC185802A4501 /* Pods-CameraTests.debug.xcconfig */,
 				A5F03E50F7AD67259E1D9778 /* Pods-CameraTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -238,7 +304,7 @@
 			);
 			name = Camera;
 			productName = Camera;
-			productReference = 13B07F961A680F5B00A75B9A /* Camera.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Lyrc.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* Camera-tvOS */ = {
@@ -291,7 +357,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 3V2A2D33C5;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 3V2A2D33C5;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -309,6 +379,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -337,8 +408,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5511C769241D628300ECE734 /* Lato-Heavy.ttf in Resources */,
+				5511C76E241D628300ECE734 /* Lato-Light.ttf in Resources */,
+				5511C76C241D628300ECE734 /* Typo_Round_Light_Italic_Demo.otf in Resources */,
+				5511C770241D628300ECE734 /* Typo_Round_Thin_Italic Demo.otf in Resources */,
+				5511C768241D628300ECE734 /* Typo_Round_Bold_Italic_Demo.otf in Resources */,
+				5511C76A241D628300ECE734 /* Typo_Round_Regular_Demo.otf in Resources */,
+				5511C761241D628300ECE734 /* Calligraffiti.ttf in Resources */,
+				5511C76D241D628300ECE734 /* StardosStencil-Regular.ttf in Resources */,
+				5511C76B241D628300ECE734 /* Typo_Round_Thin_Italic_Demo.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				5511C76F241D628300ECE734 /* Typo_Round_Italic_Demo.otf in Resources */,
+				5511C766241D628300ECE734 /* Typo_Round_Thin_Demo.otf in Resources */,
+				5511C760241D628300ECE734 /* Lato-Bold.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5511C75F241D628300ECE734 /* Typo_Round_Bold_Demo.otf in Resources */,
+				5511C762241D628300ECE734 /* Typo_Round_Light_Demo.otf in Resources */,
+				5511C763241D628300ECE734 /* Lato-Hairline.ttf in Resources */,
+				5511C764241D628300ECE734 /* SF_Cartoonist_Hand.ttf in Resources */,
+				5511C765241D628300ECE734 /* CaviarDreams.ttf in Resources */,
+				5511C767241D628300ECE734 /* overpass-extrabold.otf in Resources */,
+				5511C709241D3A9600ECE734 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +724,7 @@
 			baseConfigurationReference = 73A51DB969CDC185802A4501 /* Pods-CameraTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3V2A2D33C5;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -648,7 +739,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camera.app/Camera";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyrc.app/Lyrc";
 			};
 			name = Debug;
 		};
@@ -658,6 +749,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 3V2A2D33C5;
 				INFOPLIST_FILE = CameraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -668,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camera.app/Camera";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyrc.app/Lyrc";
 			};
 			name = Release;
 		};
@@ -677,17 +769,21 @@
 			baseConfigurationReference = 44D0296A2F1A0D6D86F3BA20 /* Pods-Camera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_ENTITLEMENTS = Camera/Camera.entitlements;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 3V2A2D33C5;
 				INFOPLIST_FILE = Camera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Camera;
+				PRODUCT_BUNDLE_IDENTIFIER = swiff.co.photes;
+				PRODUCT_NAME = Lyrc;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -697,16 +793,20 @@
 			baseConfigurationReference = CFFE05A83C1B941FA06E2419 /* Pods-Camera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_ENTITLEMENTS = Camera/Camera.entitlements;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 3V2A2D33C5;
 				INFOPLIST_FILE = Camera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Camera;
+				PRODUCT_BUNDLE_IDENTIFIER = swiff.co.photes;
+				PRODUCT_NAME = Lyrc;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
