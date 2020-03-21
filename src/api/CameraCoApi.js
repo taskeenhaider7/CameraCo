@@ -9,8 +9,8 @@ import {CameraRoll} from 'react-native';
 
 let PictureDir = fs.dirs.PictureDir;
 
-const base_url = "https://lyrc-233619.firebaseapp.com";
-//const base_url = "http://192.168.43.174:5001/lyrc-233619/us-central1/app";
+//const base_url = "https://lyrc-233619.firebaseapp.com";
+const base_url = "http://192.168.43.174:5001/lyrc-233619/us-central1/app";
 var cameraCoApi = {
     uploadStatus: "",
     uploadPercentage: 0.0,

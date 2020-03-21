@@ -85,19 +85,15 @@ export default class Login extends React.Component {
 
 
         }else{
-          alert(res.reason);
+          alert("Login failed ", res.reason);
         }
-
-
       }
-
-
     });
 
   }
 
   errorMessage(){
-    if(this.state.error != null){
+    if(this.state.error !== null){
       return(
         <View style={{height:50,justifyContent:'flex-end',paddingBottom:5}}>
           <Text>{this.state.error}</Text>
@@ -112,7 +108,7 @@ export default class Login extends React.Component {
   }
 
   validateEmail(email){
-    if(email.trim() != ''){
+    if(email.trim() !== ''){
       this.setState({email:email});
       this.clearError();
     }else{
@@ -121,7 +117,7 @@ export default class Login extends React.Component {
   }
 
   validatePassword(password){
-    if(password.trim() != ''){
+    if(password.trim() !== ''){
       this.setState({password:password});
       this.clearError();
     }else{
@@ -130,7 +126,7 @@ export default class Login extends React.Component {
   }
 
   clearError(){
-    if(this.state.error != null){
+    if(this.state.error !== null){
       this.setState({error:null});
     }
   }

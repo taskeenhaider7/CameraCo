@@ -5,7 +5,6 @@ import {
   StyleSheet,
   NativeModules,
   NativeAppEventEmitter,
-  NativeEventEmitter,
   TouchableOpacity,
   Image,
   Alert,

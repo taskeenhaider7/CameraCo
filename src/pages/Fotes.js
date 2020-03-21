@@ -104,9 +104,6 @@ export default class Fotes extends React.Component {
     }
 
     componentDidMount() {
-
-        console.log("componentWillMount ma a gya ee oy");
-
         const {state} = this.props.navigation;
         this.showLoader = state.params.showLoader;
         // check user login status
@@ -122,15 +119,12 @@ export default class Fotes extends React.Component {
 
         });
         this.updateLocation();
-        console.log("update location tak puj gai");
         // StatusBar.setHidden(true);
         if (typeof state.params === "undefined") {
-            console.log("page one");
             this.setState({
                 "page": 1
             })
         } else {
-            console.log("page " + state.params.page);
             this.setState({
                 "page": state.params.page
             })
@@ -698,7 +692,7 @@ export default class Fotes extends React.Component {
 
         }).catch((err) => {
 
-            alert(err);
+            alert("error in method resizeImageWithFilter", err);
 
         });
     }
@@ -742,7 +736,7 @@ export default class Fotes extends React.Component {
                     });
                     this.props.navigation.dispatch(resetAction);
                 }).catch((err) => {
-                    alert(err);
+                    alert("error in method createResizedImage", err);
                 });
 
 
@@ -1008,7 +1002,7 @@ export default class Fotes extends React.Component {
                 });
             })
             .catch((err) => {
-                alert(err)
+                alert("error in method copyAssetsFileIOS", err)
             });
     }
 
