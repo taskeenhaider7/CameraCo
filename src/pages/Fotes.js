@@ -263,90 +263,90 @@ export default class Fotes extends React.Component {
         // });
         /*this.notificationDisplayedListener = notifee.displayNotification((notification: any) => {
 
-           //Change here
-            /!*notifee.bad()
-                .then(count => {
-                    count++;
-                    firebase.notifications().setBadge(count)
-                })
-                .then(() => {
-                    console.log('Doing great')
-                })
-                .catch(error => {
-                    console.log('fail to count', error)
-                })*!/
+         //Change here
+         /!*notifee.bad()
+         .then(count => {
+         count++;
+         firebase.notifications().setBadge(count)
+         })
+         .then(() => {
+         console.log('Doing great')
+         })
+         .catch(error => {
+         console.log('fail to count', error)
+         })*!/
 
-        });*/
+         });*/
 
         //onNotification
         /*this.notificationListener = notifee.Notification((notification: Notification) => {
-            // alert("3");
-            //on message received and app is open
-            if (notification.data.hasOwnProperty("type")) {
-                if (notification.data.type === "DM") {
-                    _notification = notification.data;
-                    _notification.media = JSON.parse(_notification.media);
-                    _notification.thumbnails = JSON.parse(_notification.thumbnails);
-                    this.Media.onNewMessageReceived(_notification);
-                    this.Conversations.onNewMessageReceived(_notification);
+         // alert("3");
+         //on message received and app is open
+         if (notification.data.hasOwnProperty("type")) {
+         if (notification.data.type === "DM") {
+         _notification = notification.data;
+         _notification.media = JSON.parse(_notification.media);
+         _notification.thumbnails = JSON.parse(_notification.thumbnails);
+         this.Media.onNewMessageReceived(_notification);
+         this.Conversations.onNewMessageReceived(_notification);
 
-                } else if (notification.data.type === "LIKE") {
-                    _notification = notification.data;
-                    this.Media.onNewNotificationUpdateReceived(_notification)
-                } else if (notification.data.type === "COMMENT") {
-                    _notification = notification.data;
-                    this.Media.onNewNotificationUpdateReceived(_notification)
-                } else if (notification.data.type === "FOLLOW") {
-                    _notification = notification.data;
-                    this.Media.onNewNotificationUpdateReceived(_notification)
-                }
-            }
-        });*/
+         } else if (notification.data.type === "LIKE") {
+         _notification = notification.data;
+         this.Media.onNewNotificationUpdateReceived(_notification)
+         } else if (notification.data.type === "COMMENT") {
+         _notification = notification.data;
+         this.Media.onNewNotificationUpdateReceived(_notification)
+         } else if (notification.data.type === "FOLLOW") {
+         _notification = notification.data;
+         this.Media.onNewNotificationUpdateReceived(_notification)
+         }
+         }
+         });*/
         /*this.notificationOpenedListener = notifee.openNotificationSettings((notificationOpen: Notification) => {
-            const action = notificationOpen.action;
-            const notification: Notification = notificationOpen.notification;
-            cameraCoApi.getConversation(notification.data.dm_id).then((res) => {
-                if ((res.hasOwnProperty("success")) && (res.response[0].hasOwnProperty("_id"))) {
-                    if (res.success) {
-                        _conversation = res.response[0];
-                        this.props.navigation.navigate({
-                            key: 'Conversation', routeName: 'Conversation',
-                            params: {
-                                conversationId: _conversation._id,
-                                title: _conversation.title,
-                                photo: _conversation.conversation_image
-                            }
-                        });
-                    }
-                }
+         const action = notificationOpen.action;
+         const notification: Notification = notificationOpen.notification;
+         cameraCoApi.getConversation(notification.data.dm_id).then((res) => {
+         if ((res.hasOwnProperty("success")) && (res.response[0].hasOwnProperty("_id"))) {
+         if (res.success) {
+         _conversation = res.response[0];
+         this.props.navigation.navigate({
+         key: 'Conversation', routeName: 'Conversation',
+         params: {
+         conversationId: _conversation._id,
+         title: _conversation.title,
+         photo: _conversation.conversation_image
+         }
+         });
+         }
+         }
 
-            })
-        });*/
+         })
+         });*/
         /*notifee.getInitialNotification().then((notificationOpen: any) => {
-            if (notificationOpen) {
-                // App was opened by a notification
-                // Get the action triggered by the notification being opened
-                const action = notificationOpen.action;
-                // Get information about the notification that was opened
-                const notification: Notification = notificationOpen.notification;
-                cameraCoApi.getConversation(notification.data.dm_id).then((res) => {
-                    if ((res.hasOwnProperty("success")) && (res.response[0].hasOwnProperty("_id"))) {
-                        if (res.success) {
-                            _conversation = res.response[0];
-                            this.props.navigation.navigate({
-                                key: 'conversation', routeName: 'Conversation',
-                                params: {
-                                    conversationId: _conversation._id,
-                                    title: _conversation.title,
-                                    photo: _conversation.conversation_image
-                                }
-                            });
-                        }
-                    }
+         if (notificationOpen) {
+         // App was opened by a notification
+         // Get the action triggered by the notification being opened
+         const action = notificationOpen.action;
+         // Get information about the notification that was opened
+         const notification: Notification = notificationOpen.notification;
+         cameraCoApi.getConversation(notification.data.dm_id).then((res) => {
+         if ((res.hasOwnProperty("success")) && (res.response[0].hasOwnProperty("_id"))) {
+         if (res.success) {
+         _conversation = res.response[0];
+         this.props.navigation.navigate({
+         key: 'conversation', routeName: 'Conversation',
+         params: {
+         conversationId: _conversation._id,
+         title: _conversation.title,
+         photo: _conversation.conversation_image
+         }
+         });
+         }
+         }
 
-                })
-            }
-        });*/
+         })
+         }
+         });*/
         global.NOTE_COMPONENT = {};
         global.NOTE_COMPONENT.NOTE_INTENT = false;
         global.FOTES = this;
@@ -399,8 +399,8 @@ export default class Fotes extends React.Component {
 
         AppState.removeEventListener('change', this._handleAppStateChange);
         Geolocation.clearWatch(this.id);
-        this.notificationDisplayedListener =null;
-        this.notificationListener=null;
+        this.notificationDisplayedListener = null;
+        this.notificationListener = null;
 
     }
 
@@ -463,7 +463,7 @@ export default class Fotes extends React.Component {
 
     /*componentWillMount() {}
 
-    login(email, pwd, t) {}*/
+     login(email, pwd, t) {}*/
 
     handleClick() {
         this.setMode();
@@ -724,13 +724,12 @@ export default class Fotes extends React.Component {
                             {
                                 key: 'Note',
                                 routeName: 'Note',
-                                params:
-                                    {
-                                        uri: response.uri,
-                                        latitude: this.state.latitude,
-                                        longitude: this.state.longitude,
-                                        thumbnail: responset.uri
-                                    }
+                                params: {
+                                    uri: response.uri,
+                                    latitude: this.state.latitude,
+                                    longitude: this.state.longitude,
+                                    thumbnail: responset.uri
+                                }
                             }
                         )],
                     });
@@ -817,11 +816,10 @@ export default class Fotes extends React.Component {
         const resetAction = NavigationActions.reset({
             index: 0,
             actions: [NavigationActions.navigate({
-                key: 'Note', routeName: 'Note', params:
-                    {
-                        latitude: this.state.latitude,
-                        longitude: this.state.longitude,
-                    }
+                key: 'Note', routeName: 'Note', params: {
+                    latitude: this.state.latitude,
+                    longitude: this.state.longitude,
+                }
             })],
         });
         this.props.navigation.dispatch(resetAction);
@@ -982,28 +980,31 @@ export default class Fotes extends React.Component {
 
     _onImageSelected(item) {
         this.getCurrentPlace();
-        this.setState({libraryArea: 0})
-        _uri = item.item.node.image.uri;
+        this.setState({libraryArea: 0});
+        let _uri = item.item.node.image.uri;
         d = new Date().getTime();
         var destPath = RNFS.DocumentDirectoryPath + '/' + "picked_" + d + ".png";
-        RNFS.copyAssetsFileIOS(_uri, destPath, 600, 1062)
-            .then((success) => {
-                ImageResizer.createResizedImage(destPath, 600, 1062, "PNG", 85, 0, d + ".thumbnail").then((response) => {
-                    // response.uri is the URI of the new image that can now be displayed, uploaded...
-                    // response.path is the path of the new image
-                    // response.name is the name of the new image with the extension
-                    // response.size is the size of the new image
-                    this.setState({uri: destPath, preview: true, thumbnail: response.uri});
+        _uri ?
+            RNFS.copyAssetsFileIOS(_uri, destPath, 600, 1062)
+                .then((success) => {
+                    ImageResizer.createResizedImage(destPath, 600, 1062, "PNG", 85, 0, d + ".thumbnail").then((response) => {
+                        // response.uri is the URI of the new image that can now be displayed, uploaded...
+                        // response.path is the path of the new image
+                        // response.name is the name of the new image with the extension
+                        // response.size is the size of the new image
+                        this.setState({uri: destPath, preview: true, thumbnail: response.uri});
 
-                }).catch((err) => {
-                    alert(err);
-                    // Oops, something went wrong. Check that the filename is correct and
-                    // inspect err to get more details.
-                });
-            })
-            .catch((err) => {
-                alert("error in method copyAssetsFileIOS", err)
-            });
+                    }).catch((err) => {
+                        alert(err);
+                        // Oops, something went wrong. Check that the filename is correct and
+                        // inspect err to get more details.
+                    });
+                })
+                .catch((err) => {
+                    alert("error in method copyAssetsFileIOS", err)
+                })
+    :
+        "";
     }
 
     renderBtnPreview() {
@@ -1097,7 +1098,7 @@ export default class Fotes extends React.Component {
     renderLoader() {//if necesary
         //const {state} = this.props.navigation;
         if (this.showLoader) {
-            return (<FotesLoader isLoaded={this.state.appReady} />)
+            return (<FotesLoader isLoaded={this.state.appReady}/>)
         } else {
             return (null);
 
