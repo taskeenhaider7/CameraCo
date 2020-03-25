@@ -97,7 +97,7 @@ export default class Fotes extends React.Component {
             enableHighAccuracy: true,
             maximumAge: 60000
         };
-        let swiperIndex = 0;
+        this.swiperIndex = 0;
         this.filterIndex = 0;
         this.currentPage = 0;
 
@@ -108,10 +108,14 @@ export default class Fotes extends React.Component {
         this.showLoader = state.params.showLoader;
         // check user login status
         cameraCoApi.getMe().then((res) => {
+            console.log(res);
             if (res.hasOwnProperty("name")) {
                 global.USER_LOGGED = res;
             } else {
                 global.USER_LOGGED = null;
+
+                console.log("remove user");
+
                 this.removeUser();
 
             }
@@ -151,7 +155,7 @@ export default class Fotes extends React.Component {
 
                 }
 
-                _dy = gestureState.dy
+               let _dy = gestureState.dy
                 // if (_dy < -100){
                 //   _dy = -100;
                 // }
@@ -167,7 +171,7 @@ export default class Fotes extends React.Component {
                 let {left, top} = this.state;
                 left += (gestureState.moveX - gestureState.previousMoveX);
                 top += (gestureState.moveY - gestureState.previousMoveY);
-                _zoom = this.state.zoom;
+                let _zoom = this.state.zoom;
                 if (gestureState.previousPinch >= gestureState.pinch) {
                     _zoom = _zoom - 0.01;
                 } else {
@@ -180,7 +184,7 @@ export default class Fotes extends React.Component {
                 if (_zoom > 1.0) {
                     _zoom = 1;
                 }
-                if (gestureState.pinch != null) {
+                if (gestureState.pinch !== null) {
                     this.setState({
                         gestureState: {
                             ...gestureState
@@ -354,10 +358,10 @@ export default class Fotes extends React.Component {
         Swiper.prototype.componentWillUpdate = (nextProps, nextState) => {
 
 
-            swiperIndex = nextState.index
-            if (this.currentPage != swiperIndex) {
+            let swiperIndex = nextState.index;
+            if (this.currentPage !== swiperIndex) {
                 console.log("page: " + swiperIndex);
-                if (this.state.currentPage != swiperIndex) {
+                if (this.state.currentPage !== swiperIndex) {
                     this.setState({currentPage: swiperIndex});
                 }
 
@@ -995,7 +999,7 @@ export default class Fotes extends React.Component {
                         this.setState({uri: destPath, preview: true, thumbnail: response.uri});
 
                     }).catch((err) => {
-                        alert(err);
+                        alert("createResizedImage", err);
                         // Oops, something went wrong. Check that the filename is correct and
                         // inspect err to get more details.
                     });

@@ -75,7 +75,7 @@ export default class LoginNew extends React.Component {
 
           }else{
               console.log("login response success boolean", res.success);
-            alert(res.reason);
+              alert("login response success boolean", res.success);
           }
         }
       });
@@ -106,6 +106,7 @@ export default class LoginNew extends React.Component {
 
   saveUser(){
     cameraCoApi.getMe().then((response) => {
+      console.log("get me response in save user", response);
       if(response.hasOwnProperty('name')){
         let user = JSON.stringify(response);
         AsyncStorage.setItem('user',user);
